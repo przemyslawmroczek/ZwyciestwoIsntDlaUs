@@ -9,7 +9,7 @@ public class DuplicateTest {
     private Duplicate duplicates;
 
     @Test
-    public void testDuplicatesNoDuplicates() {
+    public void testDuplicatesNoDuplicates() { 
         assertEquals(0, duplicates.duplicates(new char[]{'a', 'b', 'c', 'd', 'e'}));
     }
 
