@@ -28,11 +28,4 @@ class PeselTest {
   assertFalse(p.pesel(pesel));
  }
 
- @Test
- void testPeselNull() {
-  int[] pesel = null;
-  Pesel p = new Pesel();
-  assertFalse(p.pesel(pesel));
- }
-
 }

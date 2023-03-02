@@ -1,16 +1,21 @@
 package Duplicate;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class Duplicate {
     public static int duplicates(char[] word) {
-        int duplicateCount = 0;
-        for (int i = 0; i < word.length; i++) {
-            for (int j = i + 1; j < word.length; j++) {
-                if (word[i] == word[j]) {
-                    duplicateCount++;
-                    break;
-                }
+        Set<Character> uniqueChars = new HashSet<>();
+        Set<Character> duplicateChars = new HashSet<>();
+
+        for (char c : word) {
+            if (uniqueChars.contains(c)) {
+                duplicateChars.add(c);
+            } else {
+                uniqueChars.add(c);
             }
         }
-        return duplicateCount;
+
+        return duplicateChars.size();
     }
 }

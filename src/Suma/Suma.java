@@ -4,6 +4,7 @@ public class Suma {
     public Suma() {
     }
 
+
     public static int add(int x, int y) {
         while (y != 0) {
             int carry = x & y;
@@ -12,4 +13,5 @@ public class Suma {
         }
         return x;
     }
+    
 }
